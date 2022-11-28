@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+components/
+.idea/
+dist/
+tmp/
+src/**/*.css
+src/**/fonts/glyphicons-halflings-regular.*
+src/**/fonts/wavicon.*
