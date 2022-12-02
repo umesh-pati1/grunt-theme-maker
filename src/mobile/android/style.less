@@ -1,3 +1,5 @@
+@import "./themeVariables.less";
+
 /*START - Android Theme Customizations*/
 /*Box Shadow effect*/
 .box-shadow (@x:0px, @y:2px, @blur:5px, @color:#DBDBDB) {
@@ -17,33 +19,39 @@
   -o-box-shadow: inset @arguments;
 }
 
-.wm-app  {
+.wm-app {
   @import "../../../components/bootstrap/less/bootstrap.less";
   @import url("variables.less");
 
   //Variables
-  font-size:        @font-size-base;
-  color:            @text-color;
-  font-family:      @font-family-base;
-  background-color: @body-bg;
+  font-size: @font-size-base;
+  color: var(--text-color);
+  font-family: @font-family-base;
+  background-color: var(--body-bg);
+  line-height: 24px;
 
-  @wm-default-shadow-color: 0 1px 1px rgba(0, 0, 0, .4);
+  @wm-default-shadow-color: 0 1px 1px rgba(0, 0, 0, 0.4);
   @wm-btn-text-color: #fff;
-  @wm-input-disabled-color: #ccc;
+  @wm-input-disabled-color: #a8a8a8;
 
   //Header
   @wm-header-border-color: #fff;
   @wm-header-text-color: #fff;
-  @wm-header-bg-color: @brand-primary;
+  @wm-header-bg-color: var(--brand-primary);
   @wm-header-height: auto;
+  @wm-header-font-family: "Helvetica";
+  @wm-header-font-style: normal;
+  @wm-header-font-weight: 400;
+  @wm-header-font-size: 18px;
+  @wm-header-line-height: 24px;
 
   //left panels
-  @wm-left-panel-btn-color: #4C4C4C;
+  @wm-left-panel-btn-color: #4c4c4c;
   @wm-left-panel-btn-active-color: #262626;
   @wm-left-panel-bg: #fff;
   @wm-left-panel-list-border: 1px #e6e5e5 solid;
   @wm-left-panel-link-hover-bg-color: #fff;
-  @wm-left-panel-link-hover-text-color: @brand-primary;
+  @wm-left-panel-link-hover-text-color: var(--brand-primary);
   //toggle
   @toggle-active-bg: lighten(@brand-primary, 30%);
 
@@ -59,11 +67,11 @@
   //calendar
   @wm-calendar-btn-bg: transparent;
   @wm-calendar-btn-color: #fff;
-  @wm-calendar-active-bg-color: @brand-primary;
+  @wm-calendar-active-bg-color: var(--brand-primary);
   @wm-calendar-header-color: #adadad;
   @wm-calendar-text-color: #ccc;
   @wm-datepicker-text-color: #000;
-  @wm-datepicker-header-bg: @brand-primary;
+  @wm-datepicker-header-bg: var(--brand-primary);
   @wm-datepicker-btn-hover-bg: #f0f0f0;
 
   //Label Styles: Donot remove
@@ -71,12 +79,131 @@
     font-weight: normal;
   }
 
-  .h1,.h2,.h3,.h4,.h5,.h6 {
+  .h1 {
+    width: 100%;
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 38px;
+    // color: #1D1D1B;
+    color: var(--accent-color);
+  }
+
+  .h2 {
+    width: 100%;
+    font-family: "Helvetica";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: @brand-black;
+  }
+
+  .sub-h1 {
+    font-family: "Helvetica";
+    font-weight: 700;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-black;
+  }
+
+  .body-1 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+    color: @brand-black;
+  }
+
+  .body-2 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-black;
+  }
+  .body-21 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-darkgrey;
+  }
+
+  .body-3 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: @brand-black;
+  }
+
+  .body-31 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: @brand-darkgrey;
+  }
+  .body-32 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: #7b7b7b;
+  }
+
+  .cta-text {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: var(--brand-primary);
+  }
+
+  .caption-1 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px;
+    color: @brand-black;
+  }
+
+  .caption-11 {
+    font-family: "Helvetica";
+    font-weight: 700;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px;
+    color: @brand-darkgrey;
+  }
+
+  .caption-2 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 10px;
+    font-style: normal;
+    line-height: 16px;
+    color: @brand-black;
+  }
+
+  .h3 .h4 .h5 .h5 {
     width: 100%;
   }
   //stylings for tile widget
   .app-tile {
-    &.bg-danger, &.bg-success, &.bg-info, &.bg-warning {
+    &.bg-danger,
+    &.bg-success,
+    &.bg-info,
+    &.bg-warning {
       color: @panel-primary-text;
     }
   }
@@ -92,59 +219,309 @@
     padding: 0;
   }
 
+  //adding color classes
+  .color-brand-primary {
+    color: var(--brand-primary);
+  }
+  .color-brand-success {
+    color: @brand-success;
+  }
+  .color-brand-info {
+    color: @brand-info;
+  }
+  .color-brand-warning {
+    color: @brand-warning;
+  }
+  .color-brand-danger {
+    color: @brand-danger;
+  }
+  .color-brand-pending {
+    color: @brand-pending;
+  }
+  .color-brand-inprocess {
+    color: @brand-inprocess;
+  }
+  .color-brand-disabled {
+    color: @brand-disabled;
+  }
+  .color-brand-blue {
+    color: @brand-blue;
+  }
+  .color-brand-green {
+    color: @brand-green;
+  }
+  .color-brand-black {
+    color: @brand-black;
+  }
+  .color-brand-darkgrey {
+    color: @brand-darkgrey;
+  }
+  .color-brand-lightgrey {
+    color: @brand-lightgrey;
+  }
+  .color-brand-white {
+    color: @brand-white;
+  }
+  .color-brand-tertiary-blue {
+    color: @brand-tertiary-blue;
+  }
+  .color-brand-tertiary-maroon {
+    color: @brand-tertiary-maroon;
+  }
+  .color-brand-dirty-white {
+    color: @brand-dirty-white;
+  }
+  .color-brand-blue-tint-1 {
+    color: @brand-blue-tint-1;
+  }
+  .color-brand-green-tint-1 {
+    color: @brand-green-tint-1;
+  }
+  .color-brand-maroon-tint {
+    color: @brand-maroon-tint;
+  }
+  .color-brand-green-tint-2 {
+    color: @brand-green-tint-2;
+  }
+  .color-brand-blue-tint-3 {
+    color: @brand-blue-tint-3;
+  }
+  .color-brand-green-tint-3 {
+    color: @brand-green-tint-3;
+  }
+  .color-brand-yellow-tint {
+    color: @brand-yellow-tint;
+  }
+
+  //added bg-color
+  .bg-color-brand-primary {
+    background-color: var(--brand-primary);
+  }
+  .bg-color-brand-success {
+    background-color: @brand-success;
+  }
+  .bg-color-brand-info {
+    background-color: @brand-info;
+  }
+  .bg-color-brand-warning {
+    background-color: @brand-warning;
+  }
+  .bg-color-brand-danger {
+    background-color: @brand-danger;
+  }
+  .bg-color-brand-pending {
+    background-color: @brand-pending;
+  }
+  .bg-color-brand-inprocess {
+    background-color: @brand-inprocess;
+  }
+  .bg-color-brand-disabled {
+    background-color: @brand-disabled;
+  }
+  .bg-color-brand-blue {
+    background-color: @brand-blue;
+  }
+  .bg-color-brand-green {
+    background-color: @brand-green;
+  }
+  .bg-color-brand-black {
+    background-color: @brand-black;
+  }
+  .bg-color-brand-darkgrey {
+    background-color: @brand-darkgrey;
+  }
+  .bg-color-brand-lightgrey {
+    background-color: @brand-lightgrey;
+  }
+  .bg-color-brand-white {
+    background-color: @brand-white;
+  }
+  .bg-color-brand-tertiary-blue {
+    background-color: @brand-tertiary-blue;
+  }
+  .bg-color-brand-tertiary-maroon {
+    background-color: @brand-tertiary-maroon;
+  }
+  .bg-color-brand-dirty-white {
+    background-color: @brand-dirty-white;
+  }
+  .color-brand-blue-tint-1 {
+    background-color: @brand-blue-tint-1;
+  }
+  .bg-color-brand-green-tint-1 {
+    background-color: @brand-green-tint-1;
+  }
+  .bg-color-brand-maroon-tint {
+    background-color: @brand-maroon-tint;
+  }
+  .bg-color-brand-green-tint-2 {
+    background-color: @brand-green-tint-2;
+  }
+  .bg-color-brand-blue-tint-3 {
+    background-color: @brand-blue-tint-3;
+  }
+  .bg-color-brand-green-tint-3 {
+    background-color: @brand-green-tint-3;
+  }
+  .bg-color-brand-yellow-tint {
+    background-color: @brand-yellow-tint;
+  }
+
   //Material Button styles
-  .btn, .btn:focus, .btn:active {
-    background-color: transparent;
+  .btn,
+  .btn:focus,
+  .btn:active {
+    background-color: @brand-disabled;
     border-color: transparent;
     &.btn-default {
-      color: @text-color;
+      color: var(--brand-primary);
       background-color: transparent;
-      border-color: transparent;
+      border: 1px solid var(--brand-primary);
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      border-radius: 16px;
     }
     &.btn-primary {
-      color: @btn-primary-bg;
-      background-color: transparent;
+      color: @brand-white;
+      background-color: @btn-primary-bg;
       border-color: transparent;
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      border-radius: 16px;
+    }
+    &.btn-normal {
+      color: @brand-black;
+      background-color: @brand-white;
+      border: 1px solid @brand-lightgrey;
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 16px;
+    }
+    &.btn-secondary {
+      color: var(--brand-primary);
+      background-color: @brand-white;
+      border: 1px solid var(--brand-primary);
+      border-radius: 16px;
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-tertiary {
+      color: var(--brand-primary);
+      background-color: @brand-white;
+      border: 1px solid @brand-white;
+      border-radius: 16px;
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-bg-color {
+      color: var(--brand-primary);
+      background-color: #fff3f6;
+      border: 1px solid @brand-white;
+      border-radius: 16px;
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-tertiary-disabled {
+      color: @brand-disabled;
+      background-color: @brand-white;
+      border: 1px solid @brand-white;
+      border-radius: 16px;
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
     }
     &.btn-success {
-      color: @btn-success-bg;
-      background-color: transparent;
+      color: @brand-white;
+      background-color: @btn-success-bg;
       border-color: transparent;
+      border-radius: 16px;
     }
     &.btn-info {
-      color: @btn-info-bg;
-      background-color: transparent;
+      color: @brand-white;
+      background-color: @btn-info-bg;
       border-color: transparent;
+      border-radius: 16px;
     }
     &.btn-warning {
-      color: @btn-warning-bg;
-      background-color: transparent;
+      color: @brand-black;
+      background-color: @btn-warning-bg;
       border-color: transparent;
+      border-radius: 16px;
     }
     &.btn-danger {
-      color: @btn-danger-bg;
-      background-color: transparent;
+      color: @brand-white;
+      background-color: @btn-danger-bg;
+      border-color: transparent;
+      border-radius: 16px;
+    }
+    &.btn-default:hover {
+      background-color: @brand-white;
+      border-color: var(--brand-primary);
+    }
+    &.btn-primary:hover {
+      background-color: @brand-maroon-tint;
       border-color: transparent;
     }
-    &:hover {
-      background-color: rgba(158,158,158,0.2);
+    &.btn-secondary:hover {
+      // background-color: #C7748B;
+      border-color: @brand-maroon-tint;
+    }
+    &.btn-success:hover {
+      background-color: @btn-success-bg;
+      border-color: transparent;
+    }
+    &.btn-info:hover {
+      background-color: @btn-info-bg;
+      border-color: transparent;
+    }
+    &.btn-warning:hover {
+      background-color: @btn-warning-bg;
+      border-color: transparent;
+    }
+    &.btn-danger:hover {
+      background-color: @btn-danger-bg;
       border-color: transparent;
     }
   }
-  .btn-raised, .btn-fab {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  .btn-raised,
+  .btn-fab {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     &.btn-default {
       background-color: @btn-default-bg;
-      color: @text-color;
-      &:hover, &:focus, &:active {
+      color: var(--text-color);
+      &:hover,
+      &:focus,
+      &:active {
         background-color: @btn-default-bg;
-        color: @text-color;
+        color: var(--text-color);
       }
     }
     &.btn-primary {
       background-color: @btn-primary-bg;
       color: @wm-btn-text-color;
-      &:focus, &.active, &:hover {
+      &:focus,
+      &.active,
+      &:hover {
         background-color: @btn-primary-bg;
         color: @wm-btn-text-color;
       }
@@ -152,7 +529,9 @@
     &.btn-success {
       background-color: @btn-success-bg;
       color: @wm-btn-text-color;
-      &:focus, &.active, &:hover {
+      &:focus,
+      &.active,
+      &:hover {
         background-color: @btn-success-bg;
         color: @wm-btn-text-color;
       }
@@ -160,7 +539,9 @@
     &.btn-info {
       background-color: @btn-info-bg;
       color: @wm-btn-text-color;
-      &:focus, &.active, &:hover {
+      &:focus,
+      &.active,
+      &:hover {
         background-color: @btn-info-bg;
         color: @wm-btn-text-color;
       }
@@ -168,7 +549,9 @@
     &.btn-warning {
       background-color: @btn-warning-bg;
       color: @wm-btn-text-color;
-      &:focus, &.active, &:hover {
+      &:focus,
+      &.active,
+      &:hover {
         background-color: @btn-warning-bg;
         color: @wm-btn-text-color;
       }
@@ -176,13 +559,30 @@
     &.btn-danger {
       background-color: @btn-danger-bg;
       color: @wm-btn-text-color;
-      &:focus, &.active, &:hover {
+      &:focus,
+      &.active,
+      &:hover {
         background-color: @btn-danger-bg;
         color: @wm-btn-text-color;
       }
     }
   }
-  .input-group-btn .btn, .btn {
+  //added btn-disabled
+  .btn.disabled,
+  .btn[disabled],
+  fieldset[disabled] .btn {
+    background-color: @brand-disabled;
+    color: @brand-white;
+    border-color: @brand-disabled;
+  }
+  .btn.disabled:hover,
+  .btn[disabled],
+  fieldset[disabled] .btn:hover {
+    background-color: @brand-disabled;
+    color: @brand-white;
+  }
+  .input-group-btn .btn,
+  .btn {
     margin-left: 0;
     margin-right: 0;
     &.btn-fab {
@@ -190,7 +590,8 @@
       height: 56px;
       min-width: 56px;
       width: 56px;
-      box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 1.5px 0px, rgba(0, 0, 0, 0.239216) 0px 1px 1px 0px;
+      box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 1.5px 0px,
+        rgba(0, 0, 0, 0.239216) 0px 1px 1px 0px;
       position: relative;
       line-height: normal;
       border-radius: 50%;
@@ -205,6 +606,12 @@
       }
     }
   }
+
+  //border-bottom line
+  .divider {
+    border: 1.5px solid @brand-lightgrey;
+  }
+
   //Material Menu
   .dropdown-menu {
     > li {
@@ -218,16 +625,20 @@
   /*******************************************************************************************/
   //content background
   .app-content-column {
-    background-color: @body-bg;
+    background-color: var(--body-bg);
   }
 
   //Header
   .app-mobile-navbar {
-    background-color: @wm-header-bg-color;
-    color: @wm-header-text-color;
+    background-color: var(--wm-header-bg-color);
+    color: var(--wm-header-text-color);
     height: @wm-header-height;
-    a, .navbar-brand {
-      color: @wm-header-text-color;
+    a,
+    .navbar-brand {
+      color: var(--wm-header-text-color);
+      // &>*{
+      //   vertical-align: -webkit-baseline-middle;
+      // }
     }
     .navbar.searchbar {
       .mobile-navbar-center {
@@ -238,6 +649,13 @@
           }
         }
       }
+    }
+    .mobile-navbar-left,
+    .mobile-navbar-right {
+      width: 25%;
+    }
+    .mobile-navbar-center {
+      width: 50%;
     }
     .navbar-btn {
       color: inherit !important;
@@ -254,7 +672,7 @@
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
           > li {
             > a {
-              color: @text-color;
+              color: var(--text-color);
               font-size: 1em;
               text-transform: initial;
               padding: 8px 16px;
@@ -270,8 +688,8 @@
 
   //Mobile menu panel which comes from left
   .app-left-panel {
-    background-color: @wm-left-panel-bg;
-    border-right: @wm-left-panel-list-border;
+    background-color: var(--wm-left-panel-bg);
+    border-right: var(--wm-left-panel-list-border);
     .box-shadow(0,0,10px,rgba(51, 51, 51, 0.3));
     z-index: 1;
     .nav {
@@ -282,7 +700,8 @@
           > a {
             color: inherit;
             background-color: @nav-link-hover-bg;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               color: inherit;
               background-color: @nav-link-hover-bg;
             }
@@ -290,7 +709,8 @@
         }
         a {
           color: @wm-left-panel-btn-color;
-          &.active, &:hover {
+          &.active,
+          &:hover {
             background-color: @nav-link-hover-bg;
             color: @wm-left-panel-btn-active-color;
           }
@@ -308,7 +728,8 @@
               a {
                 color: @gray-light;
                 padding: 8px 16px;
-                &:hover , &.active {
+                &:hover,
+                &.active {
                   color: @wm-left-panel-btn-active-color;
                   background-color: transparent;
                 }
@@ -326,7 +747,8 @@
       }
     }
     /***overwriting the styles when the accordion is in left panel***/
-    .app-accordion, .app-panel {
+    .app-accordion,
+    .app-panel {
       margin: 0;
       .panel-heading {
         background-color: @panel-primary-heading-bg;
@@ -394,18 +816,21 @@
   //naviagtion styles for links list in the application
   .app-nav {
     .app-nav-item {
-      .dropdown a, .dropdown a.dropdown-toggle {
-        color: @text-color;
+      .dropdown a,
+      .dropdown a.dropdown-toggle {
+        color: var(--text-color);
         padding: 8px 16px;
       }
     }
   }
   //Tabs
-  .nav-tabs, .nav-justified {
+  .nav-tabs,
+  .nav-justified {
     border-bottom-color: @nav-tabs-border-color;
     background-color: @nav-tabs-bg;
     > li {
-      > a, .app-menu a {
+      > a,
+      .app-menu a {
         color: @nav-tabs-color;
         text-transform: uppercase;
         background-color: @nav-tabs-active-link-hover-bg;
@@ -431,7 +856,8 @@
           -o-transform: scale(0);
           transform: scale(0);
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           outline: none;
           color: @nav-tabs-color;
           background-color: @nav-tabs-active-link-hover-bg;
@@ -440,7 +866,8 @@
         }
       }
       &.active {
-        > a, .app-menu a {
+        > a,
+        .app-menu a {
           border-color: transparent;
           color: @nav-tabs-color-hover;
           &:after {
@@ -448,9 +875,10 @@
             -ms-transform: scale(1);
             -o-transform: scale(1);
             transform: scale(1);
-            background: @brand-primary;
+            background: var(--brand-primary);
           }
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             border-color: transparent;
             outline: none;
             color: @nav-tabs-color-hover;
@@ -460,7 +888,8 @@
     }
   }
 
-  .app-tabs, .tab-body {
+  .app-tabs,
+  .tab-body {
     &:focus {
       outline: none;
     }
@@ -488,7 +917,8 @@
         padding-right: 0;
       }
     }
-    .btn-group, span.app-switch-overlay{
+    .btn-group,
+    span.app-switch-overlay {
       margin: 0;
       padding-left: 0;
       padding-right: 0;
@@ -496,8 +926,8 @@
         outline: transparent !important;
       }
       &.btn-primary {
-        background-color: @btn-primary-bg;
-        color: @btn-primary-color;
+        background-color: var(--btn-primary-bg);
+        color: var(--btn-primary-color);
       }
     }
   }
@@ -513,25 +943,29 @@
   /***************************************Containers Widgets**********************************/
   /*******************************************************************************************/
   //Panels
-  .panel , .panel-group .panel{
+  .panel,
+  .panel-group .panel {
     border-width: 0;
     border-radius: @border-radius-base;
     .panel-heading {
       border-radius: @border-radius-base;
-      a, a:hover {
+      a,
+      a:hover {
         color: inherit;
       }
       .panel-actions {
         .dropdown-menu > li {
-          > a, > a:hover {
-            color: @text-color;
+          > a,
+          > a:hover {
+            color: var(--text-color);
           }
         }
       }
     }
     .panel-body {
       /***specific use cases when the radioset and checkboxset comes directly in the panel****/
-      > .app-radioset, > .app-checboxset {
+      > .app-radioset,
+      > .app-checboxset {
         li {
           margin-top: 0;
         }
@@ -551,8 +985,8 @@
   //popover styles
   .popover {
     border-radius: 0px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-    color: @text-color;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
     background-color: @popover-bg;
     .arrow {
       display: block;
@@ -566,17 +1000,21 @@
   .progress {
     box-shadow: none;
     border-radius: 0;
-    height: .55em;
+    height: 0.55em;
     .progress-bar {
-      line-height: .92em;
+      line-height: 0.92em;
     }
   }
   //carousel
   .carousel-control {
-    &.left, &.right {
+    &.left,
+    &.right {
       background-image: none;
     }
-    &.icon-prev, .icon-next, .glyphicon-chevron-left, .glyphicon-chevron-right {
+    &.icon-prev,
+    .icon-next,
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right {
       color: grey;
       text-shadow: none;
     }
@@ -588,8 +1026,10 @@
       box-shadow: none;
     }
   }
+
   //for text, select controls
-  .form-control, .form-group + .form-control {
+  .form-control,
+  .form-group + .form-control {
     color: inherit;
     border: 0;
     -webkit-background-size: 0 2px, 100% 1px;
@@ -603,8 +1043,13 @@
     -webkit-transition: background 0s ease-out;
     -o-transition: background 0s ease-out;
     transition: background 0s ease-out;
-    background-image: linear-gradient(@brand-primary, @brand-primary), linear-gradient(@input-border, @input-border);
-    &:hover, &:focus {
+    background-image: linear-gradient(
+        var(--brand-primary),
+        var(--brand-primary)
+      ),
+      linear-gradient(@input-border, @input-border);
+    &:hover,
+    &:focus {
       outline: none;
       -webkit-background-size: 100% 2px, 100% 1px;
       background-size: 100% 2px, 100% 1px;
@@ -615,14 +1060,16 @@
     }
   }
   .form-control[disabled] {
-    background-color: transparent;
+    background-color: @brand-disabled;
     background-image: none;
-    border-bottom: 1px dotted rgba(0,0,0,0.1);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
   }
-  .form-group, .app-livefilter, .app-form {
+  .form-group,
+  .app-livefilter,
+  .app-form {
     .app-label {
       padding-left: 1em;
-      padding-top: .7em;
+      padding-top: 0.7em;
     }
     .app-slider {
       margin-top: 1em;
@@ -650,7 +1097,8 @@
       cursor: pointer;
       padding-left: 30px;
       margin: 1em 0;
-      &:before, &:after {
+      &:before,
+      &:after {
         position: absolute;
         content: "";
         -moz-border-radius: 50%;
@@ -666,15 +1114,15 @@
         left: 0;
         width: 20px;
         height: 20px;
-        background-color: @brand-primary;
-        border: 3px @brand-primary solid;
+        background-color: var(--brand-primary);
+        border: 3px var(--brand-primary) solid;
         .inset-shadow(0, 0, 0, 13px, #fff);
       }
     }
     input:checked + .caption:before {
-      -moz-box-shadow: inset 0 0 0 4px @body-bg;
-      -webkit-box-shadow: inset 0 0 0 4px @body-bg;
-      box-shadow: inset 0 0 0 4px @body-bg;
+      -moz-box-shadow: inset 0 0 0 4px var(--body-bg);
+      -webkit-box-shadow: inset 0 0 0 4px var(--body-bg);
+      box-shadow: inset 0 0 0 4px var(--body-bg);
     }
     input:checked + .caption:after {
       -moz-transform: translate(-50%, -50%) scale(1);
@@ -684,7 +1132,6 @@
     }
   }
 
-
   //checkbox
   .checkbox {
     .caption {
@@ -692,7 +1139,8 @@
       cursor: pointer;
       padding-left: 30px;
       margin: 1em 0;
-      &:before, &:after {
+      &:before,
+      &:after {
         position: absolute;
         content: "";
         -moz-transition: all 0.3s ease;
@@ -706,7 +1154,7 @@
         width: 20px;
         height: 20px;
         background-color: transparent;
-        border: 3px @brand-primary solid;
+        border: 3px var(--brand-primary) solid;
         .inset-shadow(0, 0, 0, 13px, transparent);
       }
     }
@@ -716,8 +1164,8 @@
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      height: .5rem;
-      border-color: @brand-primary;
+      height: 0.5rem;
+      border-color: var(--brand-primary);
       border-top-style: none;
       border-right-style: none;
       top: 5px;
@@ -728,7 +1176,7 @@
       -webkit-transform: translate(-50%, -50%) scale(1);
       transform: translate(-50%, -50%) scale(1);
     }
-    input[type=checkbox] {
+    input[type="checkbox"] {
       width: initial;
       height: initial;
       left: 1em;
@@ -736,8 +1184,10 @@
     }
   }
 
-  .radio, .checkbox {
-    input[type="radio"], input[type="checkbox"] {
+  .radio,
+  .checkbox {
+    input[type="radio"],
+    input[type="checkbox"] {
       left: 23px;
       top: 17px;
       margin: 0;
@@ -767,7 +1217,7 @@
       label {
         position: static;
         width: 36px;
-        background-color: @toggle-active-bg;
+        background-color: var(--toggle-active-bg);
         height: 14px;
         min-height: 14px;
         border: none;
@@ -779,7 +1229,7 @@
           }
         }
         .switch {
-          background-color: @brand-primary;
+          background-color: var(--brand-primary);
         }
         &.unchecked {
           background-color: rgba(0, 0, 0, 0.26) !important;
@@ -789,8 +1239,10 @@
         }
       }
       .switch {
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+          0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+          0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
         width: 20px;
         height: 20px;
         top: -3px;
@@ -806,7 +1258,7 @@
     }
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
-      background-color: @brand-primary;
+      background-color: var(--brand-primary);
       opacity: 1;
       width: 12px;
       height: 12px;
@@ -828,12 +1280,12 @@
     .app-accordion-panel.panel {
       .panel-heading {
         background-color: transparent;
-        color: @text-color;
+        color: var(--text-color);
         .panel-icon {
           margin-top: 0;
         }
         .panel-title {
-          color: @text-color;
+          color: var(--text-color);
           .heading {
             line-height: inherit;
             font-size: 1em;
@@ -873,7 +1325,7 @@
             -ms-transform: scale(1);
             -o-transform: scale(1);
             transform: scale(1);
-            background: @brand-primary;
+            background: var(--brand-primary);
             z-index: 1;
           }
         }
@@ -915,11 +1367,13 @@
       margin: 0;
     }
   }
-  .app-list, .app-livelist {
+  .app-list,
+  .app-livelist {
     .app-list-item {
       &.active {
-        > .app-panel, > .app-card {
-          border-color: @brand-primary;
+        > .app-panel,
+        > .app-card {
+          border-color: var(--brand-primary);
         }
       }
     }
@@ -940,10 +1394,12 @@
         border-bottom-width: 1px;
         color: inherit;
         border-color: transparent;
-        label, .list-group-item-text {
+        label,
+        .list-group-item-text {
           color: inherit;
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           outline: 0;
           color: inherit;
           background-color: rgba(0, 0, 0, 0.1);
@@ -956,9 +1412,9 @@
   /***************************************Advanced Widgets****************************************/
   /*******************************************************************************************/
   //Spinner icon
-  .app-spinner  {
+  .app-spinner {
     //default spinner image
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, 0.5);
     .spinner-message {
       background-color: transparent;
       border-color: transparent;
@@ -988,7 +1444,6 @@
     border-radius: 10px;
     text-align: center;
     padding: 3px 6px;
-
   }
   //Card
   .app-card {
@@ -1010,7 +1465,8 @@
       .app-card-header-text {
         padding-left: 1em;
       }
-      .app-card-avatar, .app-card-header-text{
+      .app-card-avatar,
+      .app-card-header-text {
         padding-top: 0;
       }
       .app-card-content {
@@ -1020,14 +1476,14 @@
     .card-title {
       font-size: 1.87em;
       font-weight: normal;
-      color: rgba(0,0,0,0.87);
+      color: rgba(0, 0, 0, 0.87);
     }
     .card-text {
       font-size: 1.1em;
       line-height: 1.6em;
     }
     .app-card-actions {
-      padding: .5em;
+      padding: 0.5em;
     }
   }
   //Progress Bar
@@ -1038,39 +1494,41 @@
 
   //Calendar Specific
   .app-calendar {
-    background-color: @body-bg;
+    background-color: var(--body-bg);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
     .fc {
       .fc-state-default {
-        background: rgba(0,0,0,.05);
-        border: 1px solid rgba(0,0,0,.05);
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
         color: @component-active-color;
         text-shadow: none;
-        &.fc-state-hover, &:focus, &.fc-state-active {
+        &.fc-state-hover,
+        &:focus,
+        &.fc-state-active {
           color: @btn-default-color;
           background: @btn-default-bg;
-          border: 1px solid @btn-default-border ;
+          border: 1px solid @btn-default-border;
         }
       }
     }
     .fc-state-highlight {
       &.fc-today {
         background-color: transparent;
-        color: @brand-primary;
+        color: var(--brand-primary);
       }
     }
     .fc {
       .fc-toolbar {
         margin-bottom: 0;
         padding: 1.82em;
-        background-color: @brand-primary;
+        background-color: var(--brand-primary);
         h2 {
           color: @component-active-color;
           text-transform: uppercase;
         }
       }
       th {
-        padding: .82em;
+        padding: 0.82em;
         text-align: left;
       }
     }
@@ -1084,7 +1542,7 @@
       .fc-row {
         min-height: 3em;
         .fc-content-skeleton {
-          padding: .5em 0 2.2em .5em;
+          padding: 0.5em 0 2.2em 0.5em;
           color: @wm-calendar-text-color;
           font-size: 1.52em;
           td {
@@ -1095,22 +1553,28 @@
     }
   }
   /*Date, DateTime & Dropdown widgets*/
-  .app-calendar, .app-date, .app-datetime, .app-timeinput {
+  .app-calendar,
+  .app-date,
+  .app-datetime,
+  .app-timeinput {
     //setting the margin for the group button so that it shows up over the input
     .input-group-btn:last-child {
-      > .btn, .btn-group {
+      > .btn,
+      .btn-group {
         margin-left: 0;
       }
     }
     //setting the base font color for the popup content
     .dropdown-menu {
-      color: @text-color;
+      color: var(--text-color);
     }
 
     thead {
       tr {
         th {
-          .btn.uib-left, .btn.uib-right, .btn.uib-title {
+          .btn.uib-left,
+          .btn.uib-right,
+          .btn.uib-title {
             color: @component-active-color;
             background: transparent;
             border-color: transparent;
@@ -1118,9 +1582,13 @@
             font-size: 1.24em;
             padding: 1.4em 1em;
             text-transform: uppercase;
-            &:hover, &:focus, &:active, &:active:hover, &:active:focus {
+            &:hover,
+            &:focus,
+            &:active,
+            &:active:hover,
+            &:active:focus {
               color: @component-active-color;
-              background-color: rgba(0,0,0,.01);
+              background-color: rgba(0, 0, 0, 0.01);
               border-color: transparent;
             }
           }
@@ -1135,7 +1603,8 @@
     }
 
     tbody {
-      .btn-default, .btn {
+      .btn-default,
+      .btn {
         background-color: transparent;
         border-color: transparent;
         color: @wm-datepicker-text-color;
@@ -1144,9 +1613,12 @@
         padding: @padding-base-horizontal;
         &.btn-info {
           background-color: lighten(@brand-primary, 30%);
-          color: @text-color;
+          color: var(--text-color);
         }
-        &:hover, &:focus, &.active:hover, &:focus:hover {
+        &:hover,
+        &:focus,
+        &.active:hover,
+        &:focus:hover {
           background-color: @component-active-bg;
           border-color: @component-active-bg;
           color: @component-active-color;
@@ -1155,20 +1627,21 @@
           }
         }
         .text-info {
-          color: @brand-primary;
+          color: var(--brand-primary);
           font-weight: bold;
         }
       }
     }
     small {
-      font-size: .85em;
+      font-size: 0.85em;
       text-transform: uppercase;
       color: @component-active-color;
     }
   }
 
   //styling for the popup calendar actions
-  .app-date, .app-datetime {
+  .app-date,
+  .app-datetime {
     .dropdown-menu {
       border: 1px solid transparent;
       padding: 0;
@@ -1203,7 +1676,7 @@
       }
     }
     .uib-daypicker {
-      tbody{
+      tbody {
         .btn-default {
           border-radius: 50%;
           min-width: 0;
@@ -1242,7 +1715,8 @@
         }
       }
       .btn-default {
-        &.active, &:focus {
+        &.active,
+        &:focus {
           background-color: @component-active-bg;
           color: @component-active-color;
           outline-color: transparent;
@@ -1256,7 +1730,7 @@
         &:hover {
           background-color: @wm-datepicker-btn-hover-bg;
           border-color: transparent;
-          color: @text-color;
+          color: var(--text-color);
         }
       }
       .btn-sm {
@@ -1266,10 +1740,11 @@
 
     .btn-group {
       box-shadow: none;
-      .btn , & + .btn {
+      .btn,
+      & + .btn {
         background-color: transparent;
         border-color: transparent;
-        color: @brand-primary;
+        color: var(--brand-primary);
         font-size: 1.1em;
         box-shadow: none;
       }
@@ -1277,7 +1752,8 @@
   }
 
   //App-datetime
-  .app-timeinput, .app-datetime {
+  .app-timeinput,
+  .app-datetime {
     tbody {
       .btn {
         height: 30pt;
@@ -1286,7 +1762,7 @@
         }
       }
       .text-info {
-        color: @text-color;
+        color: var(--text-color);
       }
 
       .btn-link {
@@ -1303,7 +1779,8 @@
   /***********************************************************************************************
   ****************************************** Liveform ****************************************************
   ************************************************************************************************/
-  .app-liveform, .app-device-liveform {
+  .app-liveform,
+  .app-device-liveform {
     .form-group {
       padding: 0;
       margin: 0;
@@ -1312,10 +1789,11 @@
   .form-group {
     &.live-field.active {
       .control-label {
-        color: @brand-primary;
+        color: var(--brand-primary);
       }
     }
-    .text-danger, .control-label.text-danger {
+    .text-danger,
+    .control-label.text-danger {
       color: @brand-danger;
     }
     .ng-touched.ng-invalid {

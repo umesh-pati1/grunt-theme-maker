@@ -8,3 +8,5 @@ src/**/*.css
 src/**/fonts/glyphicons-halflings-regular.*
 src/**/fonts/wavicon.*
 package-lock.json
+src/.DS_Store
+.DS_Store

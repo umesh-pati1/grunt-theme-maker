@@ -10,9 +10,15 @@
   background-color: @body-bg;
 
   //header
-  @wm-header-text-color: @brand-primary;
-  @wm-header-bg-color: #f5f5f7;
-  @wm-header-border-color: #c1c1c4;
+  @wm-header-border-color: #fff;
+  @wm-header-text-color: #fff;
+  @wm-header-bg-color: @brand-primary;
+  @wm-header-height: auto;
+  @wm-header-font-family: 'Helvetica';
+  @wm-header-font-style:normal;
+  @wm-header-font-weight: 400;
+  @wm-header-font-size: 18px;
+  @wm-header-line-height: 24px;
 
   //side panels
   @wm-panels-border-color: rgba(0,0,0,0.1);
@@ -42,9 +48,290 @@
     font-weight: normal;
   }
 
-  .h1,.h2,.h3,.h4,.h5,.h6 {
+   .h1{
     width: 100%;
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 38px;
+    color: #1D1D1B;
   }
+
+  .h2{
+    width: 100%;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: @brand-black;
+  }
+
+  .sub-h1{
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-black;
+  }
+
+  .body-1{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+    color: @brand-black;
+  }
+
+  .body-2{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-black;
+  }
+  .body-21{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-darkgrey;
+  }
+
+  .body-3{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: @brand-black;
+  }
+  
+  .body-31{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: @brand-darkgrey;
+  }
+  .body-32{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: #7b7b7b;
+  }
+
+  .cta-text{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: @brand-primary;
+  }
+
+  .caption-1{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px;
+    color: @brand-black;
+  }
+
+  .caption-11{
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px;
+    color: @brand-darkgrey;
+  }
+
+  .caption-2{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    font-style: normal;
+    line-height: 16px;
+    color: @brand-black;
+  }
+  
+  .h3 .h4 .h5 .h5{
+    width:100%;
+  }
+  //stylings for tile widget
+  .app-tile {
+    &.bg-danger, &.bg-success, &.bg-info, &.bg-warning {
+      color: @panel-primary-text;
+    }
+  }
+
+  * {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .row {
+    margin: 0;
+  }
+  .container {
+    padding: 0;
+  }
+
+  //adding color classes
+  .color-brand-primary {
+    color:@brand-primary;
+  }
+  .color-brand-success {
+    color:@brand-success;
+  }
+  .color-brand-info {
+    color:@brand-info;
+  }
+  .color-brand-warning {
+    color:@brand-warning;
+  }
+  .color-brand-danger {
+    color:@brand-danger;
+  }
+  .color-brand-pending {
+    color:@brand-pending;
+  }
+  .color-brand-inprocess {
+    color:@brand-inprocess;
+  }
+  .color-brand-disabled {
+    color:@brand-disabled;
+  }
+  .color-brand-blue {
+    color:@brand-blue;
+  }
+  .color-brand-green {
+    color:@brand-green;
+  }
+  .color-brand-black {
+    color:@brand-black;
+  }
+  .color-brand-darkgrey {
+    color:@brand-darkgrey;
+  }
+  .color-brand-lightgrey {
+    color:@brand-lightgrey;
+  }
+  .color-brand-white {
+    color:@brand-white;
+  }
+  .color-brand-tertiary-blue {
+    color:@brand-tertiary-blue;
+  }
+  .color-brand-tertiary-maroon {
+    color:@brand-tertiary-maroon;
+  }
+  .color-brand-dirty-white {
+    color:@brand-dirty-white;
+  }
+  .color-brand-blue-tint-1 {
+    color:@brand-blue-tint-1;
+  }
+  .color-brand-green-tint-1 {
+    color:@brand-green-tint-1;
+  }
+  .color-brand-maroon-tint {
+    color:@brand-maroon-tint;
+  }
+  .color-brand-green-tint-2 {
+    color:@brand-green-tint-2;
+  }
+  .color-brand-blue-tint-3 {
+    color:@brand-blue-tint-3;
+  }
+  .color-brand-green-tint-3 {
+    color:@brand-green-tint-3;
+  }
+  .color-brand-yellow-tint {
+    color:@brand-yellow-tint;
+  }
+
+  //added bg-color
+  .bg-color-brand-primary {
+    background-color:@brand-primary;
+  }
+  .bg-color-brand-success {
+    background-color:@brand-success;
+  }
+  .bg-color-brand-info {
+    background-color:@brand-info;
+  }
+  .bg-color-brand-warning {
+    background-color:@brand-warning;
+  }
+  .bg-color-brand-danger {
+    background-color:@brand-danger;
+  }
+  .bg-color-brand-pending {
+    background-color:@brand-pending;
+  }
+  .bg-color-brand-inprocess {
+    background-color:@brand-inprocess;
+  }
+  .bg-color-brand-disabled {
+    background-color:@brand-disabled;
+  }
+  .bg-color-brand-blue {
+    background-color:@brand-blue;
+  }
+  .bg-color-brand-green {
+    background-color:@brand-green;
+  }
+  .bg-color-brand-black {
+    background-color:@brand-black;
+  }
+  .bg-color-brand-darkgrey {
+    background-color:@brand-darkgrey;
+  }
+  .bg-color-brand-lightgrey {
+    background-color:@brand-lightgrey;
+  }
+  .bg-color-brand-white {
+    background-color:@brand-white;
+  }
+  .bg-color-brand-tertiary-blue {
+    background-color:@brand-tertiary-blue;
+  }
+  .bg-color-brand-tertiary-maroon {
+    background-color:@brand-tertiary-maroon;
+  }
+  .bg-color-brand-dirty-white {
+    background-color:@brand-dirty-white;
+  }
+  .color-brand-blue-tint-1 {
+    background-color:@brand-blue-tint-1;
+  }
+  .bg-color-brand-green-tint-1 {
+    background-color:@brand-green-tint-1;
+  }
+  .bg-color-brand-maroon-tint {
+    background-color:@brand-maroon-tint;
+  }
+  .bg-color-brand-green-tint-2 {
+    background-color:@brand-green-tint-2;
+  }
+  .bg-color-brand-blue-tint-3 {
+    background-color:@brand-blue-tint-3;
+  }
+  .bg-color-brand-green-tint-3 {
+    background-color:@brand-green-tint-3;
+  }
+  .bg-color-brand-yellow-tint {
+    background-color:@brand-yellow-tint;
+  }
+  
   //stylings for tile widget
   .app-tile {
     &.bg-danger, &.bg-success, &.bg-info, &.bg-warning {
@@ -190,6 +477,141 @@
     }
   }
 
+  //Material button styles
+  .btn, .btn:focus, .btn:active {
+    background-color: @brand-disabled;
+    border-color: transparent;
+    &.btn-default {
+      color: @brand-primary;
+      background-color: transparent;
+      border: 1px solid @brand-primary;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      border-radius: 16px;
+    }
+    &.btn-primary {
+      color: @brand-white;
+      background-color: @btn-primary-bg;
+      border-color: transparent;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      border-radius: 16px;
+    }
+    &.btn-normal{
+      color: @brand-black;
+      background-color: @brand-white;
+      border: 1px solid @brand-lightgrey;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 16px;
+    }
+    &.btn-secondary{
+      color: @brand-primary;
+      background-color: @brand-white;
+      border: 1px solid @brand-primary;
+      border-radius: 16px;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-tertiary{
+      color: @brand-primary;
+      background-color: @brand-white;
+      border: 1px solid @brand-white;
+      border-radius: 16px;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-bg-color{
+      color: @brand-primary;
+      background-color: #FFF3F6;
+      border: 1px solid @brand-white;
+      border-radius: 16px;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-tertiary-disabled{
+      color: @brand-disabled;
+      background-color: @brand-white;
+      border: 1px solid @brand-white;
+      border-radius: 16px;
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.btn-success {
+      color: @brand-white;
+      background-color: @btn-success-bg;
+      border-color: transparent;
+      border-radius: 16px;
+    }
+    &.btn-info {
+      color: @brand-white;
+      background-color: @btn-info-bg;
+      border-color: transparent;
+      border-radius: 16px;
+    }
+    &.btn-warning {
+      color: @brand-black;
+      background-color: @btn-warning-bg;
+      border-color: transparent;
+      border-radius: 16px;
+    }
+    &.btn-danger {
+      color: @brand-white;
+      background-color: @btn-danger-bg;
+      border-color: transparent;
+      border-radius: 16px;
+    }
+    &.btn-default:hover {
+      background-color: @brand-white;
+      border-color: @brand-primary;
+    }
+    &.btn-primary:hover {
+      background-color: @brand-maroon-tint;
+      border-color: transparent;
+    }
+    &.btn-secondary:hover {
+      // background-color: #C7748B;
+      border-color: @brand-maroon-tint;
+    }
+    &.btn-success:hover {
+      background-color: @btn-success-bg;
+      border-color: transparent;
+    }
+    &.btn-info:hover {
+      background-color: @btn-info-bg;
+      border-color: transparent;
+    }
+    &.btn-warning:hover {
+      background-color: @btn-warning-bg;
+      border-color: transparent;
+    }
+    &.btn-danger:hover {
+      background-color: @btn-danger-bg;
+      border-color: transparent;
+    }
+  }
+
   //naviagtion styles for links list in the application
   .app-nav {
     .app-nav-item {
@@ -282,6 +704,8 @@
       }
     }
   }
+
+
 
   //Tabs
   .nav-tabs {

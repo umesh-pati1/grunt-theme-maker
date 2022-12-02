@@ -1,0 +1,45 @@
+[data-theme="light"] {
+  --brand-primary: #770019; //header color
+  //** Background color for `<body>`.
+  --body-bg: #fff;
+
+  --text-color: #000000;
+}
+[data-theme="dark"] {
+  --brand-primary: #fff; //header color
+  //** Background color for `<body>`.
+  --body-bg: #770019;
+
+  --text-color: #ffffff;
+}
+
+html {
+  //body
+
+  --brand-black: #1d1d1b;
+  //** Global text color on `<body>`.
+
+  //**Buttons
+  --btn-default-color: var(--brand-primary);
+  --btn-default-bg: var(--body-bg);
+  --btn-default-border: var(--brand-primary);
+
+  --btn-primary-color: var(--body-bg);
+  --btn-primary-bg: var(--brand-primary);
+  --btn-primary-border: var(--brand-primary); // darken(@btn-primary-bg, 5%);
+  --btn-link-disabled-color: var(--brand-disabled);
+
+  //**header
+  --wm-header-border-color: var(--body-bg);
+  --wm-header-text-color: var(--body-bg);
+  --wm-header-bg-color: var(--brand-primary);
+
+  //**side panels
+  --wm-panels-border-color: rgba(0, 0, 0, 0.1);
+  --wm-left-panel-btn-color: #515253;
+  --wm-left-panel-bg: var(--body-bg);
+  --wm-left-panel-list-border: 1px #e6e5e5 solid;
+  --wm-left-panel-link-hover-bg-color: var(--body-bg);
+  --wm-left-panel-link-hover-text-color: var(--brand-primary);
+  --wm-left-panel-hover-text-color: var(--brand-primary);
+}
